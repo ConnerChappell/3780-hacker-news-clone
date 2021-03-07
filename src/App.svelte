@@ -1,6 +1,7 @@
 <script>
     import { onMount } from 'svelte'
     import _ from 'lodash'
+	
     const baseURL = `https://hacker-news.firebaseio.com/v0/`
     let ids = []
     let stories = []
