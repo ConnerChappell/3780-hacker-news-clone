@@ -62,13 +62,13 @@
 
     {#each stories as story, i}
         <div class="story">
-            <div class="rank">{i + 1}</div>
+            <div class="rank">{i + 1}.</div>
             <div class="storyInfo">
                 <div>
                     <a class="storyTitle" href={story.url} target="_blank">{story.title}</a>
-                    <a class="storyUrl" href={story.url} target="_blank">{formatLink(story.url)}</a>
+                    <a class="storyUrl" href={story.url} target="_blank">({formatLink(story.url)})</a>
                 </div>
-                <div class="storyPoints">{story.score}</div>
+                <div class="storyPoints">{story.score} points</div>
             </div>
         </div>
     {/each}
@@ -77,11 +77,40 @@
 
 <style>
     main {
-        /* text-align: center; */
-        padding: 1em;
+        padding: 0;
         width: 720px;
         margin: 0 auto;
+		background-color: #f6f6f0;
     }
+	header {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		background-color: #ff6600;
+	}
+	h3 {
+		color: #000;
+		padding: 5px;
+	}
+	.story {
+		display: flex;
+		margin: 1rem 0;
+	}
+	.rank {
+		color: #828282;
+		margin: 0 .5rem;
+	}
+	.storyTitle {
+		color: #000;
+	}
+	.storyUrl {
+		color: #828282;
+		font-size: .75rem;
+	}
+	.storyPoints {
+		color: #828282;
+		font-size: .75rem;
+	}
 
 
     @media (min-width: 640px) {
