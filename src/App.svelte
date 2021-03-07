@@ -1,10 +1,22 @@
 <script>
-	export let name;
+	
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<header>
+		<h3>Hacker News</h3>
+	</header>
+	
+	<div class="story">
+		<div class="rank">#rank</div>
+		<div class="storyInfo">
+			<div>
+				<a class="storyTitle" href="">story title</a>
+				<a class="storyUrl" href="">story url</a>
+			</div>
+			<div class="storyPoints"># of points</div>
+		</div>
+	</div>
 </main>
 
 <style>
